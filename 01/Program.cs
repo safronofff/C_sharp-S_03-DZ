@@ -4,23 +4,19 @@
 //12821 -> да
 //23432 -> да
 
+void Polindrom(int x)
+{
+	if (x > 9999 & x < 100000)
+	{
+		if (((x / 10000) == (x % 10)) & (((x / 1000) % 10) == ((x % 100) / 10))) Console.WriteLine($"число {x} является полиндромом");
+		else Console.WriteLine($"число {x} НЕ является полиндромом");
+	}
+	else Console.WriteLine($"число {x} НЕ является пятизначным");
+}
+
 
 Console.WriteLine("Введите пятизнчное число: ");
-string x = Console.ReadLine();
-int y = x.Length;
 
-if (y == 5)
-{
-	if (x[0] == x[4] && x[1] == x[3])
-	{
-		Console.WriteLine($"число {x} является палиндром");
-	}
-	else
-	{
-		Console.WriteLine($"{x} НЕ является палиндром");
-	}
-}
-else
-{
-	Console.WriteLine($"число {x} не является пятизначным");
-}
+int num = Convert.ToInt32(Console.ReadLine());
+
+Polindrom(num);
