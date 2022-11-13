@@ -2,12 +2,16 @@
 //3 -> 1, 8, 27
 //5 -> 1, 8, 27, 64, 125
 
+void Kub(int x)
+{
+	for (int y = 1; y <= x; y++)
+	{
+		int z = y * y * y;
+		Console.WriteLine(z);
+	}
+}
 
 Console.WriteLine("Введите число");
-int x = Convert.ToInt32(Console.ReadLine());
+int num = Convert.ToInt32(Console.ReadLine());
 
-for (int y = 1; y <= x; y++)
-{
-	int z = y * y * y;
-	Console.WriteLine(z);
-}
+Kub(num);
